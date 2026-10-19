@@ -24,6 +24,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import androidx.appcompat.app.AlertDialog;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String CHANNEL_ID = "animal_channel";
@@ -68,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 new String[]{"name", "icon"},
                 new int[]{R.id.tv_name, R.id.iv_icon}
         );
-
+        showLoginDialog();
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener((parent, view, position, id) -> {
@@ -76,6 +83,32 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, name, Toast.LENGTH_LONG).show();
             sendNotification(name);
         });
+
+    }
+    private void showLoginDialog() {
+        View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_login, null);
+        EditText etUsername = dialogView.findViewById(R.id.et_username);
+        EditText etPassword = dialogView.findViewById(R.id.et_password);
+        Button btnCancel = dialogView.findViewById(R.id.btn_cancel);
+        Button btnSignIn = dialogView.findViewById(R.id.btn_sign_in);
+
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setView(dialogView)
+                .create();
+
+        btnCancel.setOnClickListener(v -> dialog.dismiss());
+        btnSignIn.setOnClickListener(v -> {
+            String username = etUsername.getText().toString().trim();
+            String password = etPassword.getText().toString().trim();
+            if (username.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "请输入用户名和密码", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            Toast.makeText(this, "登录：" + username, Toast.LENGTH_SHORT).show();
+            dialog.dismiss();
+        });
+
+        dialog.show();
     }
 
     private void createNotificationChannel() {
