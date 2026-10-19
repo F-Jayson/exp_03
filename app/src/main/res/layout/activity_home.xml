@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="实验3 导航页"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_task1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="1. ListView"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btn_task2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="2. AlertDialog"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btn_task3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="3. XML菜单"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btn_task4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="4. ActionMode 菜单"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btn_task5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="5. RecyclerView 列表视图"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
