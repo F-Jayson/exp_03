@@ -26,6 +26,8 @@ public class HomeActivity extends AppCompatActivity {
         Button btnTask1 = findViewById(R.id.btn_task1);
         Button btnTask2 = findViewById(R.id.btn_task2);
         Button btnTask3 = findViewById(R.id.btn_task3);
+        Button btnTask4 = findViewById(R.id.btn_task4);
+        Button btnTask5 = findViewById(R.id.btn_task5);
 
         btnTask1.setOnClickListener(v ->
                 startActivity(new Intent(this, MainActivity.class)));
@@ -35,6 +37,12 @@ public class HomeActivity extends AppCompatActivity {
 
         btnTask3.setOnClickListener(v ->
                 startActivity(new Intent(this, MenuActivity.class)));
+
+        btnTask4.setOnClickListener(v ->
+                startActivity(new Intent(this, ActionModeActivity.class)));
+
+        btnTask5.setOnClickListener(v ->
+                startActivity(new Intent(this, RecyclerViewActivity.class)));
     }
 
 
