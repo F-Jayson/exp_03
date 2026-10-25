@@ -18,7 +18,7 @@ Android Studio Rabbit 1 | 2026.2.1
 
 完整导航页 XML 如下：
 
-[activity_home.xml](F:/@android/exp_03/app/src/main/res/layout/activity_home.xml:1)
+[activity_home.xml](app/src/main/res/layout/activity_home.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -91,7 +91,7 @@ Android Studio Rabbit 1 | 2026.2.1
 
 **4. 绑定点击事件：** 为每个按钮设置 OnClickListener，通过 new Intent(this, 目标Activity.class) 构造显式 Intent，再调用 startActivity() 打开对应页面。
 
-[HomeActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/HomeActivity.java:1)
+[HomeActivity.java](app/src/main/java/com/mobleapp/exp_03/HomeActivity.java#L1)
 
 ```java
 package com.mobleapp.exp_03;
@@ -147,7 +147,7 @@ public class HomeActivity extends AppCompatActivity {
 
 ### 1.4 设置 AndroidManifest.xml
 
-[AndroidManifest.xml](F:/@android/exp_03/app/src/main/AndroidManifest.xml:1)
+[AndroidManifest.xml](app/src/main/AndroidManifest.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -210,7 +210,7 @@ public class HomeActivity extends AppCompatActivity {
 
 使用 Lion、Tiger、Monkey、Dog、Cat、Elephant 六组动物。名称数组与图标数组按相同顺序排列，后续用相同下标组合成一条记录。主布局放置占满可用区域的 ListView，并设置列表项分隔线。
 
-[activity_main.xml](F:/@android/exp_03/app/src/main/res/layout/activity_main.xml:1)
+[activity_main.xml](app/src/main/res/layout/activity_main.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -241,7 +241,7 @@ public class HomeActivity extends AppCompatActivity {
 
 在 list_item.xml 中使用横向 LinearLayout
 
-[list_item.xml](F:/@android/exp_03/app/src/main/res/layout/list_item.xml:1)
+[list_item.xml](app/src/main/res/layout/list_item.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -278,7 +278,7 @@ public class HomeActivity extends AppCompatActivity {
 
 遍历名称和图片数组，每条 Map 使用 name、icon 两个键。SimpleAdapter 的 from 数组按顺序指定源字段，to 数组按相同顺序指定目标控件， name → tv_name、icon → iv_icon。再调用 setAdapter() 链接列表和数据。
 
-[MainActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/MainActivity.java:53)
+[MainActivity.java](app/src/main/java/com/mobleapp/exp_03/MainActivity.java#L53)
 
 ```java
         String[] names = {"Lion", "Tiger", "Monkey", "Dog", "Cat", "Elephant"};
@@ -324,7 +324,7 @@ Manifest 中的权限声明如下：
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 ```
 
-[MainActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/MainActivity.java:80)
+[MainActivity.java](app/src/main/java/com/mobleapp/exp_03/MainActivity.java#L80)
 
 ```java
         listView.setOnItemClickListener((parent, view, position, id) -> {
@@ -337,7 +337,7 @@ Manifest 中的权限声明如下：
 
 ```
 
-[MainActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/MainActivity.java:88)
+[MainActivity.java](app/src/main/java/com/mobleapp/exp_03/MainActivity.java#L88)
 
 ```java
     private void createNotificationChannel() {
@@ -351,7 +351,7 @@ Manifest 中的权限声明如下：
     }
 ```
 
-[MainActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/MainActivity.java:98)
+[MainActivity.java](app/src/main/java/com/mobleapp/exp_03/MainActivity.java#L98)
 
 ```java
     private void requestNotificationPermission() {
@@ -366,7 +366,7 @@ Manifest 中的权限声明如下：
     }
 ```
 
-[MainActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/MainActivity.java:109)
+[MainActivity.java](app/src/main/java/com/mobleapp/exp_03/MainActivity.java#L109)
 
 ```java
     private void sendNotification(String name) {
@@ -400,7 +400,7 @@ Manifest 中的权限声明如下：
 
 dialog_login.xml 的根节点采用竖直 LinearLayout；用户名输入框设置 textPersonName，密码输入框设置 textPassword；底部用横向布局排列 Cancel 和 Sign in 两个等宽按钮。
 
-[dialog_login.xml](F:/@android/exp_03/app/src/main/res/layout/dialog_login.xml:1)
+[dialog_login.xml](app/src/main/res/layout/dialog_login.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -489,7 +489,7 @@ DialogActivity 的 onCreate() 设置底层布局后，调用 showLoginDialog()�
 
 activity_menu.xml 由 Toolbar 和 TextView 组成。Toolbar 作为菜单载体；TextView 初始为黑色，包含三行测试文字。Activity 中调用 setSupportActionBar(toolbar) 把 Toolbar 接入 AppCompat ，并保存 tv_test 引用用于修改显示属性。
 
-[activity_menu.xml](F:/@android/exp_03/app/src/main/res/layout/activity_menu.xml:1)
+[activity_menu.xml](app/src/main/res/layout/activity_menu.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -519,7 +519,7 @@ activity_menu.xml 由 Toolbar 和 TextView 组成。Toolbar 作为菜单载体�
 </LinearLayout>
 ```
 
-[MenuActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/MenuActivity.java:33)
+[MenuActivity.java](app/src/main/java/com/mobleapp/exp_03/MenuActivity.java#L33)
 
 ```java
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -535,7 +535,7 @@ activity_menu.xml 由 Toolbar 和 TextView 组成。Toolbar 作为菜单载体�
 
 main_menu.xml 以 menu 为根节点。字体大小、字体颜色两个 item 中分别嵌套 menu，形成两组子菜单；普通菜单项位于一级菜单
 
-[main_menu.xml](F:/@android/exp_03/app/src/main/res/menu/main_menu.xml:1)
+[main_menu.xml](app/src/main/res/menu/main_menu.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -585,7 +585,7 @@ main_menu.xml 以 menu 为根节点。字体大小、字体颜色两个 item 中
 
 重写 onCreateOptionsMenu()，调用 getMenuInflater().inflate()。系统回调 onOptionsItemSelected() 后，根据 item.getItemId() 分别处理字号、Toast 或颜色。字号使用 TypedValue.COMPLEX_UNIT_SP，分别设置为 10、16、20；颜色通过 Color.RED、Color.BLACK 设置。处理成功返回 true，其余菜单事件交由父类处理。
 
-[MenuActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/MenuActivity.java:39)
+[MenuActivity.java](app/src/main/java/com/mobleapp/exp_03/MenuActivity.java#L39)
 
 ```java
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -594,7 +594,7 @@ main_menu.xml 以 menu 为根节点。字体大小、字体颜色两个 item 中
     }
 ```
 
-[MenuActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/MenuActivity.java:45)
+[MenuActivity.java](app/src/main/java/com/mobleapp/exp_03/MenuActivity.java#L45)
 
 ```java
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -646,7 +646,7 @@ main_menu.xml 以 menu 为根节点。字体大小、字体颜色两个 item 中
 
 主页面包含 Toolbar、操作提示、ListView 和空列表提示。列表行左侧使用应用图标，右侧显示 One～Six。将选中状态写在独立 selector 中，使用 state_activated 响应 ListView 的勾选激活状态。
 
-[activity_action_mode.xml](F:/@android/exp_03/app/src/main/res/layout/activity_action_mode.xml:1)
+[activity_action_mode.xml](app/src/main/res/layout/activity_action_mode.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -689,7 +689,7 @@ main_menu.xml 以 menu 为根节点。字体大小、字体颜色两个 item 中
 </LinearLayout>
 ```
 
-[action_list_item.xml](F:/@android/exp_03/app/src/main/res/layout/action_list_item.xml:1)
+[action_list_item.xml](app/src/main/res/layout/action_list_item.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -718,7 +718,7 @@ main_menu.xml 以 menu 为根节点。字体大小、字体颜色两个 item 中
 </LinearLayout>
 ```
 
-[action_item_background.xml](F:/@android/exp_03/app/src/main/res/drawable/action_item_background.xml:1)
+[action_item_background.xml](app/src/main/res/drawable/action_item_background.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -737,7 +737,7 @@ main_menu.xml 以 menu 为根节点。字体大小、字体颜色两个 item 中
 
 把列表名称和应用图标组合为 Map 数据，使用 SimpleAdapter 加载行布局。删除按钮定义在 action_mode_menu.xml，使用独立 action_delete ID 和垃圾桶图标；AppCompat 菜单使用 app:showAsAction。
 
-[ActionModeActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/ActionModeActivity.java:43)
+[ActionModeActivity.java](app/src/main/java/com/mobleapp/exp_03/ActionModeActivity.java#L43)
 
 ```java
         if (savedInstanceState == null) {
@@ -760,7 +760,7 @@ main_menu.xml 以 menu 为根节点。字体大小、字体颜色两个 item 中
 
 ```
 
-[action_mode_menu.xml](F:/@android/exp_03/app/src/main/res/menu/action_mode_menu.xml:1)
+[action_mode_menu.xml](app/src/main/res/menu/action_mode_menu.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -778,7 +778,7 @@ main_menu.xml 以 menu 为根节点。字体大小、字体颜色两个 item 中
 
 先调用 setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL)，再注册 MultiChoiceModeListener。
 
-[ActionModeActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/ActionModeActivity.java:62)
+[ActionModeActivity.java](app/src/main/java/com/mobleapp/exp_03/ActionModeActivity.java#L62)
 
 ```java
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
@@ -852,7 +852,7 @@ main_menu.xml 以 menu 为根节点。字体大小、字体颜色两个 item 中
 
 在版本目录中声明 RecyclerView 1.4.0 和 CardView 1.0.0，并在 app 模块的 dependencies 中显式引用。其余实现沿用工程的 Java 和 XML 结构。
 
-[libs.versions.toml](F:/@android/exp_03/gradle/libs.versions.toml:10)
+[libs.versions.toml](gradle/libs.versions.toml#L10)
 
 ```toml
 recyclerview = "1.4.0"
@@ -870,7 +870,7 @@ implementation(libs.cardview)
 
 animal_card_item.xml 以 CardView 为根容器；内部用横向布局排列 80dp 图片与名称。可点击与焦点属性放在整个卡片上，使点击区域覆盖整行。
 
-[Animal.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/Animal.java:1)
+[Animal.java](app/src/main/java/com/mobleapp/exp_03/Animal.java#L1)
 
 ```java
 package com.mobleapp.exp_03;
@@ -886,7 +886,7 @@ public class Animal {
 }
 ```
 
-[animal_card_item.xml](F:/@android/exp_03/app/src/main/res/layout/animal_card_item.xml:1)
+[animal_card_item.xml](app/src/main/res/layout/animal_card_item.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -930,7 +930,7 @@ public class Animal {
 
 ViewHolder 缓存 TextView 和 ImageView，避免每次绑定重复查找。点击时通过 getBindingAdapterPosition() 读取当前有效位置
 
-[AnimalAdapter.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/AnimalAdapter.java:1)
+[AnimalAdapter.java](app/src/main/java/com/mobleapp/exp_03/AnimalAdapter.java#L1)
 
 ```java
 package com.mobleapp.exp_03;
@@ -1000,7 +1000,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
 
 主页面上方显示标题、当前记录数量和新增按钮，下方 RecyclerView 使用剩余空间。LinearLayoutManager 负责纵向排列，Adapter 负责把 Animal 数据绑定到每行。
 
-[activity_recycler_view.xml](F:/@android/exp_03/app/src/main/res/layout/activity_recycler_view.xml:1)
+[activity_recycler_view.xml](app/src/main/res/layout/activity_recycler_view.xml#L1)
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -1046,7 +1046,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
 </LinearLayout>
 ```
 
-[RecyclerViewActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/RecyclerViewActivity.java:38)
+[RecyclerViewActivity.java](app/src/main/java/com/mobleapp/exp_03/RecyclerViewActivity.java#L38)
 
 ```java
         if (savedInstanceState == null) {
@@ -1079,7 +1079,7 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalView
 4. 更新“共 N 条记录”的文字。
 5. scrollToPosition(position)，让新记录出现在可见区域。
 
-[RecyclerViewActivity.java](F:/@android/exp_03/app/src/main/java/com/mobleapp/exp_03/RecyclerViewActivity.java:52)
+[RecyclerViewActivity.java](app/src/main/java/com/mobleapp/exp_03/RecyclerViewActivity.java#L52)
 
 ```java
         findViewById(R.id.btn_add_animal).setOnClickListener(v ->
